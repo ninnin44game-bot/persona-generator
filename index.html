@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- スマホ対応 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DQX 輝晶獣 出現時間チェッカー</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>DQX 輝晶獣<br>出現時間チェッカー</h1>
+    </header>
+
+
+    <main>
+
+        <!--
+            表を横スクロールさせるための箱
+        -->
+        <div class="table-container">
+
+            <table id="crystal-table">
+
+                <thead>
+                    <tr>
+                        <th class="server-header">サーバー</th>
+
+                        <th>ゲルヘナ</th>
+                        <th>ジャリムバハ</th>
+                        <th>ベルヴァイン</th>
+                        <th>バルディア</th>
+                        <th>グラデル</th>
+                        <th>旧ネクロデア</th>
+                    </tr>
+                </thead>
+
+                <!--
+                    ここにJavaScriptで
+                    サーバー1～40を自動生成する
+                -->
+                <tbody id="server-list"></tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

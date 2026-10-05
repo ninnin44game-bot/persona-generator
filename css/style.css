@@ -1,0 +1,324 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #333;
+
+    background: #f3f3f3;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+.header {
+    padding: 20px;
+
+    text-align: center;
+
+    background: #333;
+
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+
+    font-size: 26px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   表
+========================= */
+
+main {
+    width: 100%;
+}
+
+
+/*
+    表を横スクロールできるようにする
+*/
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding: 15px;
+}
+
+
+/*
+    表そのもの
+*/
+
+table {
+    border-collapse: collapse;
+
+    min-width: 1100px;
+
+    margin: 0 auto;
+
+    background: white;
+}
+
+
+/* =========================
+   見出し
+========================= */
+
+th {
+    height: 50px;
+
+    padding: 8px;
+
+    border: 1px solid #797979;
+
+    background: #444;
+
+    color: white;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+}
+
+
+/*
+    サーバー列
+*/
+
+.server-header {
+    position: sticky;
+
+    left: 0;
+
+    z-index: 10;
+
+    width: 90px;
+
+    min-width: 90px;
+}
+
+
+/* =========================
+   セル
+========================= */
+
+td {
+    width: 170px;
+
+    min-width: 170px;
+
+    height: 120px;
+
+    padding: 8px;
+
+    border: 1px solid #ccc;
+
+    background: white;
+
+    vertical-align: top;
+}
+
+
+/*
+    サーバー名
+*/
+
+.server-name {
+    position: sticky;
+
+    left: 0;
+
+    z-index: 5;
+
+    width: 90px;
+
+    min-width: 90px;
+
+    padding: 8px;
+
+    background: #eee;
+
+    border: 1px solid #ccc;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   4色ボタン
+========================= */
+
+.color-buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 4px;
+
+    margin-bottom: 10px;
+}
+
+
+.color-button {
+    padding: 8px 2px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/*
+    ボタンを押したとき
+*/
+
+.color-button:active {
+    transform: scale(0.95);
+}
+
+
+/* 青 */
+
+.blue {
+    background: #1976d2;
+}
+
+
+/* 黄 */
+
+.yellow {
+    background: #f9a825;
+}
+
+
+/* 赤 */
+
+.red {
+    background: #d32f2f;
+}
+
+
+/* 虹 */
+
+.rainbow {
+    background:
+        linear-gradient(90deg,
+            #e53935,
+            #f9a825,
+            #43a047,
+            #1976d2,
+            #8e24aa);
+}
+
+
+/* =========================
+   時間表示
+========================= */
+
+.times {
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.times div {
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #eee;
+}
+
+.times span {
+    color: #777;
+}
+
+.times strong {
+    font-size: 12px;
+}
+
+
+/* =========================
+   スマホ
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px 10px;
+    }
+
+    .header h1 {
+        font-size: 21px;
+    }
+
+    .table-container {
+        padding: 8px;
+    }
+
+
+    /*
+        スマホではセルを少し小さく
+    */
+
+    td {
+        width: 150px;
+
+        min-width: 150px;
+
+        height: 115px;
+
+        padding: 6px;
+    }
+
+
+    .color-button {
+        padding: 9px 2px;
+
+        font-size: 12px;
+    }
+
+
+    .times {
+        font-size: 11px;
+    }
+
+}
